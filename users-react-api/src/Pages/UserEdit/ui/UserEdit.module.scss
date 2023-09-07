@@ -1,0 +1,124 @@
+@import '../../../styles/mixins.scss';
+
+.form-section {
+    padding: 36px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+        padding: 52px 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+    }
+}
+
+.form-title-wrapper,
+.form-Title-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+}
+
+.form-Title-alert {
+    h1 {
+        color: var(--red-color);
+    }
+}
+
+.user-form {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 36px;
+    }
+
+    .input-wrap {
+        width: 100%;
+        margin: 8px 0;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width: 45%;
+            margin: 10px;
+        }
+        
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--grey-color);
+            outline: none;
+
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid var(--primary-color);
+                box-shadow: inset 0px -8px 0px -6px  var(--primary-color);
+            }
+
+            &.invalid-input {
+                border-bottom: 1px solid var(--red-color);
+                box-shadow: inset 0px -8px 0px -6px  var(--red-color);
+        
+                &:hover,
+                &:focus,
+                &:focus-visible {
+                    border-bottom: 1px solid var(--red-color);
+                    box-shadow: inset 0px -8px 0px -6px  var(--red-color);
+                }
+            }
+        }
+    }
+
+    .validation-error {
+        color: var(--red-color);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        font-size: 12px;
+    }
+
+    .btn-wrap {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 36px;
+        }
+    }
+}
+
+.popup {
+    @include flex-center;
+    border-radius: 5px;
+    padding: 18px;
+    background-color: var(--light--green);
+    text-align: center;
+    margin-top: 42px;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 64px;
+        padding: 26px;
+    }
+
+    span {
+        color: var(--white-color);
+    }
+}

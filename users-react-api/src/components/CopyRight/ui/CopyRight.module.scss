@@ -1,0 +1,9 @@
+@import '../../../styles/mixins.scss';
+
+.copy-right-wrap {
+    @include flex-center;
+
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-end;
+    }
+}

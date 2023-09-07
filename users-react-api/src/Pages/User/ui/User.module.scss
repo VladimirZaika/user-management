@@ -1,0 +1,49 @@
+.user-section {
+    padding: 32px 0;
+
+    @media screen and (min-width: 1024px) {
+        padding: 48px 0;
+    }
+
+    .mb {
+        margin-bottom: 12px;
+    
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .user-info-err,
+    .user-info {
+        width: 100%;
+
+        &.title {
+            text-align: center;
+
+            
+            &.mb {
+                margin-bottom: 24px;
+    
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: 36px;
+                }
+            }
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .user-info {
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    .user-info-err {
+        span {
+            color: var(--red-color);
+        }
+    }
+}

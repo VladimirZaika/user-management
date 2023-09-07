@@ -1,0 +1,33 @@
+@import '../../../styles/mixins.scss'; 
+
+.not-found-section {
+    @include flex-center;
+    flex-direction: column !important;
+    padding: 20px;
+    height: calc(100vh - 240px);
+
+    @media screen and (min-width: 768px) {
+        height: calc(100vh - 207px);
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 40px;
+        height: calc(100vh - 267px);
+    }
+
+    .not-found-title {
+        color: var(--soft-black-color);
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .not-found-btn {
+        margin-top: 32px;
+        color: var(--white-color);
+        background-color: var(--green-color);
+    
+        @media screen and (min-width: 1024px) {
+            margin-top: 46px;
+        }
+    }
+}
